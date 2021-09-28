@@ -41,7 +41,7 @@ app.py : This file contains the main code for the flask web application when the
 3. This project is completely Open-Source So Manhy talented Developer can add Their own tools to this web application and expand it even further!
   
 ### Potentials
-There is so many potentials in this simple concept because as more complete Digitoo gets more usefull it will be and You don't need a seprate website for each tool all of them are available in one place for free Even in furthur development of the web Application Developers can sign in and deploy their own tools and earn a passive income from this website but the website stays completely free and developers can earn income from add revenue and so many other ideas!! The said things are still concepts and the potentials the  web application as of now is a simple tools box with 5 tools that anybody can use for free.
+There is so many potentials in this simple concept because as more complete Digitools gets more usefull it will be and You don't need a seprate website for each tool all of them are available in one place for free Even in furthur development of the web Application Developers can sign in and deploy their own tools and earn a passive income from this website but the website stays completely free and developers can earn income from add revenue and so many other ideas!! The said things are still concepts and the potentials the  web application as of now is a simple tools box with 5 tools that anybody can use for free.
   
 ### Final words
 This web application actually started really small by featuring only one tool and we added more tools as the time went by we hope that this would not the end of this project but only the Beginning of something new!
