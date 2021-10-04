@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Image to Text converter
+{% endblock %}
+
+{% block main %}
+<h2 style="position: absolute;top: 140px;color: rgb(133, 133, 133);left: 60px;"> Upload your file.</h2>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul style="position: absolute;  top: 520px; left: 120px;color: red;">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    <h3 style="position: absolute;top: 200px;color: rgb(133, 133, 133);left: 60px;"> Notes:</h3>
+    <h4 style="position: absolute;top: 250px;color: rgb(133, 133, 133);left: 60px;">This feature is just a Way to speed up the process of extracting text out of image.</h4>
+    <h4 style="position: absolute;top: 280px;color: rgb(133, 133, 133);left: 60px;">For Professional usage, this feature is not super accurate.</h4>
+    <h4 style="position: absolute;top: 310px;color: rgb(133, 133, 133);left: 60px;">This feature is suitable for only small amount of text.</h4>
+    <h4 style="position: absolute;top: 340px;color: rgb(133, 133, 133);left: 60px;">After using this feature be sure to double check the text to correct the mistakes.</h4>
+    <h4 style="position: absolute;top: 370px;color: rgb(133, 133, 133);left: 60px;">Do not use This feature for long paragraphs.</h4>
+    <h4 style="position: absolute;top: 400px;color: rgb(133, 133, 133);left: 60px;"> After the extraction a link will appear linked to the extracted text.</h4>
+    <form action = "/imgtotxt" , method= "POST" enctype="multipart/form-data">
+        <label for="myfile" style="position: absolute;top: 465px;left: 60px;color: rgb(133, 133, 133);">Select a File:</label>
+        <input name = "file" type ="file" style="position: absolute;  top: 493px; left: 60px;color: rgb(212, 212, 212);">
+        <button type = "submit" style="position: absolute;  top: 520px; left: 60px;color: green;">Convert!</button>
+    </form>
+{% endblock %}

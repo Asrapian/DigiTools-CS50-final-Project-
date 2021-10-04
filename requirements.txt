@@ -1,0 +1,7 @@
+flask
+qrcode
+pyshorteners
+requests
+pytesseract
+Pillow
+cs50

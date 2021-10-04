@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <link href="/static/icons8-tools-64_4.png" rel="shortcut icon" type="Image/png"/>
+        <title>TOOLS</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/ead5578200.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        body{
+            height: 800px;
+            background-image: linear-gradient(to right,#260024,rgb(49, 163, 163));
+        }
+        #bala_menu{
+            background-color: rgb(32, 32, 32);
+            text-decoration: none;
+            position:absolute;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 340px;
+            margin-top: 50px;
+            border-radius: 80px;
+
+        }
+        #bala_menu ul li{
+            text-decoration: none;
+            float: right;
+            display:inline;
+            margin: 40px;
+            text-align: center;
+
+        }
+        #bala_menu ul li :hover{
+            text-decoration: none;
+            background-color: aquamarine;
+            border-radius: 20px;
+            
+        }
+        .button1{
+            background: url("static/3702396_code_qr_scan_scanner_icon.png");
+            background-size: cover;
+            background-color: rgba(87, 87, 87, 0.37);
+            width: 80px;
+            height:80px;
+            position: relative;
+            top: 350px;
+            left: 310px;
+            padding: 0px;
+            margin: 0px;
+            border-radius: 15px;
+            border : 5px solid rgb(119, 0, 113);
+            animation: mymove 4s infinite;
+        }
+        @keyframes mymove{
+          50%  {border-color: rgb(49, 163, 163);}
+        }
+        .button1 :hover{
+            border: 5px solid #260024
+        }
+        .button2{
+            background:url("static/7228378_cloud_two.png")no-repeat;
+            background-size:cover;
+            background-color: rgba(87, 87, 87, 0.37);
+            width: 82px;
+            height:82px;
+            position: relative;
+            top: 190px;
+            right: 240px;
+            left: 520px;
+            padding: 0px;
+            margin: unset;
+            border-radius: 15px;
+            border : 5px solid rgb(119, 0, 113);
+            animation: mymove 4s infinite;
+        }
+        @keyframes mymove{
+          50%  {border-color: rgb(49, 163, 163);}
+        }
+        .button2 :hover{
+            border: 5px solid #260024
+        }
+        .button3{
+            background: url("static/scanner-2198892-1832705.png");
+            background-color: rgba(87, 87, 87, 0.37);
+            background-size:cover;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            top: 350px;
+            left: 750px;
+            border-radius: 15px;
+            border : 5px solid rgb(119, 0, 113);
+            animation: mymove 4s infinite;
+        }
+        @keyframes mymove{
+          50%  {border-color: rgb(49, 163, 163);}
+        }
+        .button3 :hover{
+            border: 4px solid #260024
+        }
+        .button4{
+            background:url("static/9024079.png");
+            background-color: rgba(87, 87, 87, 0.37);
+            background-size:cover;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            top: 520px;
+            left: 353px;
+            border-radius: 15px;
+            border : 5px solid rgb(119, 0, 113);
+            animation: mymove 4s infinite;
+        }
+        @keyframes mymove{
+          50%  {border-color: rgb(49, 163, 163);}
+        }
+        .button4 :hover{
+            border: 4px solid #260024;
+        }
+        .button5{
+            background:url("static/185087_link_icon.png");
+            background-color:rgba(87, 87, 87, 0.37);
+            background-size:cover;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            top: 350px;
+            left: 268px;
+            border-radius: 15px;
+            border : 5px solid rgb(119, 0, 113);
+            animation: mymove 4s infinite;
+        }
+        @keyframes mymove{
+          50%  {border-color: rgb(49, 163, 163);}
+        }
+        .button5:hover{
+            border: 4px solid #260024;
+        }
+
+    </style>
+    
+    
+    
+    <body>
+        <div id="bala_menu">
+        <ul>
+            <li><a href="/welcome">Welcome Page</a></li>
+            <li><a href="/tools">Digitools Menu</a></li>
+            <li><a href="/contactus">Contact us</a></li>
+        </ul>  
+
+        </div>
+        <div id="grad"></div>
+
+        <div id="center">
+            
+        </div>
+        <a href="/qr"><button class="button button1" title=" QR Code"> </button></a>
+        <a href="/pass"><button class="button button2"  title="Password Generator"> </button></a>
+        <a href="/imgtotxt"><button class="button button3" title="Image Convert to Text"> </button></a>
+        <a href="/ascii"><button class="button button4" title="Ascii Art"> </button></a>
+        <a href="/urlshortener"><button class="button button5"  title="Url shortener"> </button></a>
+
+        <div id="left">
+
+        </div>
+        <div id="right">
+
+        </div>
+        <div id="footer">
+
+        </div>
+    </body>
+</html>
+
+

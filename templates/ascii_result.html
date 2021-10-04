@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Ascii Art Generator
+{% endblock %}
+
+{% block main %}
+<h2 style="position: absolute;top: 140px;color: rgb(133, 133, 133);left: 60px;"> Upload the image.</h2>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    <h3 style="position: absolute;top: 200px;color: rgb(133, 133, 133);left: 60px;"> Summery:</h3>
+    <h4 style="position: absolute;top: 250px;color: rgb(133, 133, 133);left: 60px;">This tool takes an image and converts it into an ascii art. </h4>
+    <h4 style="position: absolute;top: 280px;color: rgb(133, 133, 133);left: 60px;">The output will be in text on this page to save the ascii art on your computer you may need to save the text as a txt file.</h4>
+    <form action = "/ascii" , method= "POST" enctype="multipart/form-data">
+        <label for="myfile" style="position:absolute;top: 360px;  color: rgb(133, 133, 133);left: 60px;">Select a File:</label>
+        <input name = "file" type ="file" style="position:absolute ;top: 400px;color: rgb(133, 133, 133);left: 60px;">
+        <button type = "submit" style="position:absolute  ;top: 465px;left: 60px;">Convert!</button>
+    </form>
+    <h5 style="position: absolute;top: 415px;color: rgb(38, 161, 0);left: 60px;"> After Clicking on convert button your ascii art will be available in the link bellow:</h5>
+    <a href = "/static/ascii_art.txt" style="position: absolute;  top: 498px; color: rgb(5, 178, 190);  left: 60px;"> Generated Ascii Art</a> 
+{% endblock %}

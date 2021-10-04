@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %} 
+ Contact us
+{% endblock %}
+
+{% block main %}
+<p>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul style="position:absolute;left: 218px;top: 270px;color: red;">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</p>
+<form action = "/contactus" method = "POST">
+    <p  style="position: absolute;top: 180px;color: rgb(133, 133, 133);left: 60px;">Name:</p>
+    <input autofocus autocomplete = "off" placeholder = "Name"  type = "text" name = "name" maxlength="15"style="position: absolute;top: 206px;color: rgb(133, 133, 133);left: 60px;">
+    <p  style="position: absolute;top: 250px;color: rgb(133, 133, 133);left: 60px;">Email:</p>
+    <input autocomplete="off" placeholder = "Email" type = "text"  name ="email" maxlength = "50" style="position: absolute;top: 276px;left: 60px;">
+    <p style="position: absolute;top: 310px;left: 60px;color: rgb(133, 133, 133);">Subject:</p>
+    <select name = "topic"style="position:absolute;top:340px;left:60px">
+        <option disabled selected value="">Topic</option>
+        <option value = "feedback">Feedback</option>
+        <option value = "newtools">New tool suggestion</option>
+    </select>
+    <p  style="position:absolute;top:380px;left:60px;color: rgb(133, 133, 133);">Title:</p>
+    <input autocomplete="off" placeholder = "Title" type = "text"  name ="title" maxlength = "25"style="position:absolute;  top:410px;  left:60px">
+    <p  style="position:absolute; top:460px;  left:60px;  color: rgb(133, 133, 133);">Description:</p>
+    <input autocomplete="off" placeholder = "Description" type = "text"  name ="description" maxlength = "255"  style="position:absolute;top:490px;left:60px">
+    <button type = "submit" style="position:absolute; top:520px;  left:60px">Submit</button>
+</form>    
+    
+    <p>{{ msg}} </p>
+
+
+{% endblock %}

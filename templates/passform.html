@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}
+Password Generator
+{% endblock %}
+
+{% block main %}
+<h3 style="position: absolute;top: 180px;color: rgb(133, 133, 133);left: 60px;">Notes:</h3>
+<h4 style="position: absolute;top: 226px;color: rgb(133, 133, 133);left: 60px;">In generating these passwords privacy is our top priority.</h4>
+<h4 style="position: absolute;top: 250px;color: rgb(133, 133, 133);left: 60px;">The passwords are randomly generated based on the option you select and are not pre-built. </h4>
+<h4 style="position: absolute;top: 273px;color: rgb(133, 133, 133);left: 60px;">The passwords are not saved into any kind of database so the passwords are private to the user who generated. </h4>
+<h4 style="position: absolute;top: 315px;color: rgb(133, 133, 133);left: 60px;"> Lets enjoy safer internet by using different passwords for different accounts.</h4>
+<form action = "/pass" , method="POST">
+    <style>
+
+    </style>
+    <select name = "password" style="position: absolute;top: 450px;left: 60px;border:4px solid rgba(113, 36, 133, 0.836); border-radius: 3px 18px;background-color:rgba(66, 66, 66, 0.39);color: cyan;">
+        <option disabled selected value="" >Password Types</option>
+        {% for pass in types %}
+            {% if pass == "All" %}
+            <option value="{{ pass }}">{{ pass }} (Most Security)</option>
+            {% elif pass == "Numeric" or pass == "Alphabetical" %}
+            <option value="{{ pass }}">Only {{ pass }} (Least Secure)</option>
+            {% else %}
+            <option value="{{ pass }}">{{ pass }}</option>
+            {% endif %}
+        {% endfor %}
+
+    </select>
+    <button type="submit" style="position: absolute;top: 450px;left: 298px;"> Generate </button> 
+</form>
+<p style="position: absolute;top: 488px;left: 60px;color: rgb(255, 174, 0);">{{password}}</p>
+{% endblock %}

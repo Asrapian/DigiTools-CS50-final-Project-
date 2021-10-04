@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <link href="/static/icons8-tools-64_4.png" rel="shortcut icon" type="Image/png"/>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        body{
+            height: 800px;
+            background-image: linear-gradient(to right,rgb(38, 00, 36),rgb(49, 163, 163));
+        }
+        #bala_menu{
+            background-color: rgb(32, 32, 32);
+            text-decoration: none;
+            position:absolute;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: 340px;
+            margin-top:27px;
+            border-radius: 80px;
+
+        }
+        #bala_menu ul li{
+            text-decoration: none;
+            float: right;
+            display:inline;
+            margin: 40px;
+            text-align: center;
+
+        }
+        #bala_menu ul li :hover{
+            text-decoration: none;
+            background-color: aquamarine;
+            border-radius: 20px;
+            
+        }
+        
+    </style>
+    
+    
+    
+    <body>
+        <div id="bala_menu">
+        <ul>
+            <li><a href="/welcome">Welcome Page</a></li>
+            <li><a href="/tools">Digitools Menu</a></li>
+            <li><a href="/contactus">Contact us</a></li>
+        </ul>  
+
+        </div>
+        <div id="grad"></div>
+
+        <div id="center">
+            <main>
+               {% block main %}     
+               {% endblock %} 
+            </main>
+            
+        </div>
+
+
+        <div id="left">
+
+        </div>
+        <div id="right">
+
+        </div>
+        <div id="footer">
+
+        </div>
+    </body>
+</html>
+
+

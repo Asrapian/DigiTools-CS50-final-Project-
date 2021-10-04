@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Shortener
+{% endblock %}
+
+{% block main %}
+    <form action = "/urlshortener" , method= "POST">
+        <h2 style="position: absolute;top: 170px;color: rgb(133, 133, 133);left: 60px;">Url Shortener </h2>
+        
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul style="position: absolute;top: 313px; left: 300px;color: red;" >
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        
+        <h4 style="position: absolute;top: 220px;color: rgb(133, 133, 133);left: 60px;">Depanding on your region you may need to use a VPN service to access this feature</h4>
+        <label for = "myurl" style="position: absolute;top: 260px;color: rgb(133, 133, 133);left: 60px;">Enter The URL:</label>
+        <input name="url" , autofocus , autocomplete="off", type ="url" placeholder="Url;" style="position: absolute;top: 310px;left: 60px;border:4px solid rgba(113, 36, 133, 0.836); border-radius: 3px 18px;background-color:rgba(66, 66, 66, 0.39);color: cyan;">
+        <button type = "submit" style="position: absolute;top: 313px; left: 250px;">Convert!</button>
+        </form>
+        {% if shortened == None %}
+        <p style = "color: red;position: absolute;top: 360px;left: 60px;">Connection ERROR: Either you have weak connection or You may need to use a VPN service to use this feature</p>
+        {% else %}
+        <p style="position: absolute;top: 398px;left:60px; color: aqua;"> <b style="position: absolute;top: 380px;left:60px;color: aqua;">Shortened url:</b> {{shortened}}</p>
+        
+        {% endif %}
+        
+
+{% endblock %}
